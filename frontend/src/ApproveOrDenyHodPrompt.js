@@ -12,7 +12,7 @@ import {sendEmail,sendDeniedEmail} from './SendEmail';
 
   function DeleteLab(props, ref) {
     const setLoadingCount=props.loading;
-    const API_URL = "http://localhost:5000";
+    const API_URL = "https://lab-scheduling-system-backend.onrender.com";
     const [token,setToken]=useState(props.token);
     const responseRef=useRef();
   const[open,setOpen] = useState(false);

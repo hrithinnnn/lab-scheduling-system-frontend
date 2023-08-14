@@ -12,7 +12,7 @@ export default function DeleteProfile(props) {
   const setLoadingCount=props.loading;
   const [email, setEmail] = useState(props.email);
   const [token, setToken] = useState(props.token);
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
   const [err, setErr] = useState('')
   const [openSnackbar, setSnackbarOpen] = useState(false);
   const [snackBarMessage, setSnackbarMessage] = useState('')

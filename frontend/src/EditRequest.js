@@ -8,7 +8,7 @@ import TestSnackbar from './TestSnackbar';
 import { events } from './Options';
 
 function EditRequest(props, ref) {
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
   const[token,setToken] = useState(props.token)
   const [err, setErr] = useState('')
     const [title,setTitle]=useState(props.title);

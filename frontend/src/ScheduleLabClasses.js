@@ -15,7 +15,7 @@ export default function ScheduleLabClasses(props){
     const[userName,setUserName]=useState(props.userName);
     const[role,setRole]=useState(props.role);
     const [token,setToken]=useState(props.token);
-    const API_URL = "http://localhost:5000";
+    const API_URL = "https://lab-scheduling-system-backend.onrender.com";
     const [alertTitle,setAlertTitle]=useState();
     const [alertMsg,setAlertMsg] =useState();
     const [section,setSection]=useState();

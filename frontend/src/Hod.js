@@ -6,7 +6,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 import { statusColor,time } from './DisplayUtils';
 import status from './status';
 export default function Hod(props){
-    const API_URL = "http://localhost:5000";
+    const API_URL = "https://lab-scheduling-system-backend.onrender.com";
     const[role,setRole]=useState(props.role);
     const [token,setToken]=useState(props.token);
     const [pending, setPending] = useState([])

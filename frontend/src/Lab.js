@@ -14,7 +14,7 @@ export default function Lab(props){
     const [snackBarMessage, setSnackbarMessage] = useState('')
     const [id,setId] =useState()
     const [statusReq,setStatus] = useState();
-    const API_URL = "http://localhost:5000";
+    const API_URL = "https://lab-scheduling-system-backend.onrender.com";
     const [pending, setPending] = useState([])
     const alertRef=useRef();
     const [date,setDate]=useState();

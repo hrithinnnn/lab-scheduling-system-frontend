@@ -16,7 +16,7 @@ import { labs } from './Options';
 function CheckAvailability(props, ref) {
   const [data,setData]=useState([]);
   const responseRef=useRef();
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
   const[token,setToken] = useState(props.token)
   const [err, setErr] = useState('')
     const [date,setDate]=useState();

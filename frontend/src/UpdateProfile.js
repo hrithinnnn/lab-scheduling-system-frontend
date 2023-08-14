@@ -8,7 +8,7 @@ import DeleteProfile from "./DeleteProfile";
 import LinearProgress from '@mui/material/LinearProgress';
 import { roles } from "./Options";
 export default function UpdateProfile(props){
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
   const [loadingCount, setLoadingCount] = useState(0);
   const [token,setToken]=useState(props.token);
   const [userName,setName] = useState(props.userName);

@@ -24,7 +24,7 @@ export default function Home(props) {
   const [openSnackbar, setSnackbarOpen] = useState(false);
   const [snackBarMessage, setSnackbarMessage] = useState('')
   const [displayMessage,setDisplayMessage]=useState('')
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
 
   const [date, setDate] = useState(() => {
     var dt = new Date();

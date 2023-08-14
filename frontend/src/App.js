@@ -17,7 +17,7 @@ function App() {
   const [password, setPassword] = useState();
   const [instituition, setInstituition] = useState();
   const [phone, setPhone] = useState();
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
   const [isLogin, setIsLogin] = useState(false)
   const [loading, setLoading] = useState(true); 
   const token = localStorage.getItem("token");

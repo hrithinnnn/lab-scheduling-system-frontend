@@ -4,7 +4,7 @@ import './loginsignup.css'
 import TestSnackbar from './TestSnackbar';
 import { roles } from './Options';
 export default function Login({ setIsLogin }) {
-    const API_URL = "http://localhost:5000";
+    const API_URL = "https://lab-scheduling-system-backend.onrender.com";
     const [user, setUser] = useState({ username: '', email: '', password: '', role: 'HOD', instituition: '', phone: '', newpassword: '' })
     const [err, setErr] = useState('')
     const [openSnackbar, setSnackbarOpen] = useState(false);

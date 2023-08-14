@@ -12,7 +12,7 @@ import TestSnackbar from './TestSnackbar';
 function ChangePassword(props, ref) {
  const[email,setEmail]=useState(props.email);
  const setLoadingCount=props.loading;
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
   const [token,setToken]=useState(props.token);
   const [open, setOpen] = React.useState(false);
   const [openSnackbar, setSnackbarOpen] = useState(false);

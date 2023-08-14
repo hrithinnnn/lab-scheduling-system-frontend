@@ -10,7 +10,7 @@ import axios from 'axios';
 import TestSnackbar from './TestSnackbar';
 import {sendEmail,sendDeniedEmail} from './SendEmail';
   function DeleteLab(props, ref) {
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
   const [token,setToken]=useState(props.token);
   const[open,setOpen] = useState(false);
   const [openSnackbar, setSnackbarOpen] = useState(false);

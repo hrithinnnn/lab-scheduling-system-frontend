@@ -6,7 +6,7 @@ import { statusColor,time } from './DisplayUtils';
 import status from './status';
 
 export default function Search(props){
-    const API_URL = "http://localhost:5000";
+    const API_URL = "https://lab-scheduling-system-backend.onrender.com";
     const [token,setToken]=useState(props.token);
     const [data, setData] = useState([])
     const [query, setQuery] = useState('');

@@ -9,7 +9,7 @@ import axios from 'axios';
 import TestSnackbar from './TestSnackbar';
   function DeleteRequest(props, ref) {
     const[open,setOpen] = useState(false);
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
   const [token,setToken]=useState(props.token);
   const [openSnackbar, setSnackbarOpen] = useState(false);
   const [snackBarMessage, setSnackbarMessage] = useState('')
