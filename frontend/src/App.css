@@ -1,0 +1,48 @@
+/* *{
+  text-align:center
+} */
+
+#time-picker{
+  margin-top: 3%;;
+}
+
+#wrapper{
+  border:solid black 1px;
+  border-radius: 10px;
+  width:75%;
+  margin-left:12.5%;
+  margin-bottom:2%;
+}
+
+#item-container{
+  text-align: center;
+}
+
+.nav{
+  position:absolute;
+  height:3%;
+  /* margin-bottom: 100px; */
+}
+
+#components{
+  position:absolute;
+  margin-top: 3%;
+  height:97%;
+  width:100%;
+}
+button:hover{
+  cursor: pointer;
+}
+
+.create.form{
+
+    transform: translate(-50%, 20% );
+  
+}
+
+.schedule.form{
+  transform: translate(-50%, 10% );
+}
+.update.form{
+  transform: translate(-50%, 30% );
+}
