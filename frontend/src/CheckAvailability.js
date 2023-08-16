@@ -46,6 +46,7 @@ function CheckAvailability(props, ref) {
 const handlelabNameChange = event => {
   setLabName(event.target.value);
   console.log(labName)
+  setErr('')
 }
 
 
@@ -124,7 +125,7 @@ const handlelabNameChange = event => {
     </select> <br></br>
 date:
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker selected={date} onChange={date => setDate(String(date["$M"]+1)+'-'+String(date["$D"])+'-'+date["$y"])}/>
+      <DatePicker selected={date} onChange={date => setDate(String(date["$y"])+'-'+String(date["$M"]+1)+'-'+String(date["$D"]))}/>
     </LocalizationProvider> <br></br>
     <LocalizationProvider dateAdapter={AdapterDayjs}>
         <TimePicker

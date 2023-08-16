@@ -57,7 +57,7 @@ function ApproveResponse(props, ref) {
         setDisplayMessage(`${labName} is available on ${date} from ${start} to ${end} `)
     }
     else{
-        setDisplayMessage(`${labName} is not available on ${date.split('T')[0]} from ${start} to ${end}. ask the owner of the following requests(s) or labs to delete the following requests(s) or lab classes and try again. `)
+        setDisplayMessage(`${labName} is not available on ${date.split('T')[0]} from ${start} to ${end}. ask the owner of the following request(s) or labs to delete the following request(s) or lab classes and try again. `)
     }
   }
 

@@ -24,7 +24,7 @@ export default function Home(props) {
   const [openSnackbar, setSnackbarOpen] = useState(false);
   const [snackBarMessage, setSnackbarMessage] = useState('')
   const [displayMessage,setDisplayMessage]=useState('')
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
 
   const [date, setDate] = useState(() => {
     var dt = new Date();
@@ -173,7 +173,7 @@ export default function Home(props) {
     <h1>Lab Schedule</h1>
     <div id="time-picker">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DatePicker format='DD-MM-YYYY' selected={date} onChange={date => {setDate(String(date["$M"] + 1) + '-' + date["$D"]+'-'+String(date["$y"]));console.log("new date: ",date)}} />
+        <DatePicker format='DD-MM-YYYY' selected={date} onChange={date => {setDate(String(date["$y"])+'-'+String(date["$M"]+1)+'-'+String(date["$D"]));console.log("new date: ",date)}} />
 
       </LocalizationProvider>
 

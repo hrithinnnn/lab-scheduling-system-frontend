@@ -172,12 +172,12 @@ return (<>
   <h1>Summary</h1>
   <div id="time-picker">
     start date:<LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker format='DD-MM-YYYY' selected={startDate} onChange={date => setStartDate(String(date["$y"]) + '-' + String(date["$M"] + 1) + '-' + date["$D"])} />
+      <DatePicker format='DD-MM-YYYY' selected={startDate} onChange={date => setStartDate(date["$y"]+'-'+String(date["$M"]+1)+'-'+String(date["$D"]))} />
 
       <br></br>end date:</LocalizationProvider>
 
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker format='DD-MM-YYYY' selected={endDate} onChange={date => setEndDate(String(date["$y"]) + '-' + String(date["$M"] + 1) + '-' + date["$D"])} />
+      <DatePicker format='DD-MM-YYYY' selected={endDate} onChange={date => setEndDate(date["$y"]+'-'+String(date["$M"]+1)+'-'+String(date["$D"]))} />
 
     </LocalizationProvider>
 <br></br>

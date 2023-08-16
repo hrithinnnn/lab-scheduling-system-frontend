@@ -16,7 +16,7 @@ performance fixes:
  28. close hod and lab prompts after sending mail.
  29. open snackbar using ref instead of passing true as props.
  30. add key as props in all the places where i used map function to display a json.
-
+ 31. setavailability not changing err when date is changed  
  css fixes:
  1. date,timepickers css, inputfield(desc).
  2. ssn logo on nav

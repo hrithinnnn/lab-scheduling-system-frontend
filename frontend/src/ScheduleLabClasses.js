@@ -202,7 +202,7 @@ export default function ScheduleLabClasses(props){
     <input placeholder='number of classes' type='number' id="numberOfClasses" name="numberOfClasses" onChange={handleNumberChange} value={numberOfClasses} /> <br></br>
     </div>
    date: <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker selected={startDate} onChange={date => setStartDate(String(date["$M"]+1)+'-'+String(date["$D"])+'-'+date["$y"])}/>
+      <DatePicker selected={startDate} onChange={date => setStartDate(String(date["$y"])+'-'+String(date["$M"]+1)+'-'+String(date["$D"]))}/>
     </LocalizationProvider> <br></br>
    start time: <LocalizationProvider dateAdapter={AdapterDayjs}>
         <TimePicker

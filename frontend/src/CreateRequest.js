@@ -23,7 +23,7 @@ setRole(props.role);
 setToken(props.token);
 setEmail(props.email)
 },[props.userName,props.role,props.token,props.email])
-    const API_URL = "http://localhost:5000";
+    const API_URL = "https://lab-scheduling-system-backend.onrender.com";
     const [title,setTitle]=useState();
     const [description,setDescription]=useState();
     const [date,setDate]=useState();
@@ -165,7 +165,7 @@ setEmail(props.email)
     </select> <br></br>
     date:
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker format="DD-MM-YYYY" selected={date} onChange={date => setDate(String(date["$M"]+1)+'-'+String(date["$D"])+'-'+date["$y"])}/>
+      <DatePicker format="DD-MM-YYYY" selected={date} onChange={date => setDate(String(date["$y"])+'-'+String(date["$M"]+1)+'-'+String(date["$D"]))}/>
     </LocalizationProvider> <br></br>
 
     <LocalizationProvider dateAdapter={AdapterDayjs}>
