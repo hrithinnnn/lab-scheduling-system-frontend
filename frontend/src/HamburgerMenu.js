@@ -31,10 +31,8 @@ export default function HamburgerMenu(props) {
         <List>
             <h2>hello, {`${user}`}</h2>
             <hr></hr>
-        <Link to='/labapproval'> <h3>pending requests (Lab)</h3></Link>
-        <hr></hr>
-        {(role=="HOD")?<Link to="/hodapproval"><h3> pending requests(HOD)</h3></Link>:null}
-        <hr></hr>
+        {(role==="Lab Incharge"||role==="Admin")?<><Link to='/labapproval'> <h3>pending requests (Lab)</h3></Link><hr></hr></>:null}
+        {(role=="HOD"|| role=="Admin")?<><Link to="/hodapproval"><h3> pending requests(HOD)</h3></Link><hr></hr></>:null}
         <Link to='/summary'><h3>summary</h3></Link> 
        <hr></hr>
         </List>

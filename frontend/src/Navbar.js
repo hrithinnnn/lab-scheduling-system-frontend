@@ -31,7 +31,7 @@ export default function Navbar(props) {
           </div>
         </div>
         <li><Link to="/search" ><div id="item">search </div></Link></li>
-        <li><Link to="/scheduleLabClasses"><div id="item">schedule lab</div></Link></li>
+        {role==='Lab Incharge'||role==='Admin'?<li><Link to="/scheduleLabClasses"><div id="item">schedule lab</div></Link></li>:null}
         <li><Link to="/create"><div id="item">create request</div></Link></li>
         <li id="item"><Link to="/"><div id="item">Schedules</div></Link></li>
 
