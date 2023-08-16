@@ -26,6 +26,7 @@ export default function RouterComponent(props) {
         setPassword(props.password);
         setPhone(props.phone);
         setInstituition(props.instituition);
+        console.log("App token", token)
     },[props.userName,props.role,props.token,props.phone,props.instituition,props.email,props.password])
     return (
         

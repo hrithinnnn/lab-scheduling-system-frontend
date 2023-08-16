@@ -23,7 +23,7 @@ setRole(props.role);
 setToken(props.token);
 setEmail(props.email)
 },[props.userName,props.role,props.token,props.email])
-    const API_URL = "https://lab-scheduling-system-backend.onrender.com";
+    const API_URL = "http://localhost:5000";
     const [title,setTitle]=useState();
     const [description,setDescription]=useState();
     const [date,setDate]=useState();

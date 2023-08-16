@@ -16,7 +16,6 @@ const time = (t) => {
       min = "0" + min
     }
     const am = (pm) ? "PM" : "AM";
-    console.log("aaaaa", hr, min)
     return hr + ":" + min + am;
 
   }

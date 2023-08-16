@@ -24,7 +24,7 @@ export default function Home(props) {
   const [openSnackbar, setSnackbarOpen] = useState(false);
   const [snackBarMessage, setSnackbarMessage] = useState('')
   const [displayMessage,setDisplayMessage]=useState('')
-  const API_URL = "https://lab-scheduling-system-backend.onrender.com";
+  const API_URL = "http://localhost:5000";
 
   const [date, setDate] = useState(() => {
     var dt = new Date();
@@ -64,11 +64,12 @@ export default function Home(props) {
   useEffect(() => {
     console.log(date)
     setLoadingCount(prev => prev + 1);
-    axios.get(API_URL + `/requests/${date}`, { headers: { Authorization: token } })
-      .then(docs => { console.log("docs", docs.data.reqs); setData(docs.data.reqs); setLoadingCount(prev => prev - 1); })
+    console.log("home token", token);
+    axios.get(API_URL + `/requests/get/${date}`, { headers: { Authorization: token } })
+      .then(docs => { console.log("docs", docs); setData(docs.data.reqs); setLoadingCount(prev => prev - 1); })
       .catch((err) => {
         setLoadingCount(prev => prev - 1);
-        setSnackbarMessage("couldnt fetch requests: " + err.response.data.message);
+        setSnackbarMessage("couldnt fetch requests: " + err.response.data.message||"cannot connect to server");
         console.log(snackBarMessage);
         setSnackbarOpen(true);
         setTimeout(() => {
@@ -81,14 +82,14 @@ export default function Home(props) {
 
     setLoadingCount(prev => prev + 1);
 
-    axios.get(API_URL + `/lab/${date}`, { headers: { Authorization: token } })
+    axios.get(API_URL + `/lab/get/${date}`, { headers: { Authorization: token } })
       .then(docs => {
         setLab(docs.data.reqs);
         setLoadingCount(prev => prev - 1);
       })
       .catch((err) => {
         setLoadingCount(prev => prev - 1);
-        setSnackbarMessage(err.response.data.message);
+        setSnackbarMessage(err.response.data.message||"cannot connect to server");
         console.log(snackBarMessage);
         setSnackbarOpen(true);
         setTimeout(() => {
@@ -172,7 +173,7 @@ export default function Home(props) {
     <h1>Lab Schedule</h1>
     <div id="time-picker">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DatePicker format='DD-MM-YYYY' selected={date} onChange={date => setDate(String(date["$y"]) + '-' + String(date["$M"] + 1) + '-' + date["$D"])} />
+        <DatePicker format='DD-MM-YYYY' selected={date} onChange={date => {setDate(String(date["$M"] + 1) + '-' + date["$D"]+'-'+String(date["$y"]));console.log("new date: ",date)}} />
 
       </LocalizationProvider>
 
