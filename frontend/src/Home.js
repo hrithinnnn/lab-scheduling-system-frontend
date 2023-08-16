@@ -124,6 +124,7 @@ export default function Home(props) {
     setSorted(allDocs)
 
   }, [allDocs])
+  
   useEffect(()=>{
     if (allDocs.length===0 ){
       setDisplayMessage("Nothing scheduled yet on this date in this lab")
@@ -131,7 +132,7 @@ export default function Home(props) {
       else{
         setDisplayMessage('')
       }
-  },[data])
+  },[allDocs])
 
   useEffect(() => {
     if (labFilter !== "All labs") {
