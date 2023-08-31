@@ -87,7 +87,7 @@ function App() {
 
            {isLogin? <Navbar className='nav' role={role} user={userName}/>:null}
           { !loading ? <div id='components'>
-            { loadingCount !== 0 ? <LinearProgress color="inherit" /> : null }
+            {/* { loadingCount !== 0 ? <LinearProgress color="inherit" /> : null } */}
             {
               isLogin
                 ? <RouterComponent setIsLogin={setIsLogin} userName={userName} email={email} password={password} instituition={instituition} role={role} phone={phone} token={token} />
